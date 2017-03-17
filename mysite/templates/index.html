@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <script src="{% static 'encimat1/js/unslider.js' %}"></script>
+        <script src="{% static 'encimat1/js/javascript.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'encimat1/css/hexagons.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'encimat1/css/hexagon2.css' %}" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,300,200,100,900' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="{% static 'encimat1/css/unslider.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'encimat1/css/animate.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'encimat1/css/style.css' %}" />
+        <script>
+
+          jQuery(document).ready(function($) {
+            var slider = $('.my-slider').unslider({
+              keys: false,
+              arrows: false,
+              nav: false,
+              infinite: true
+            });
+            $('.seta-esq').click(function() {
+              slider.data('unslider').prev();
+            });
+            $('.seta-dir').click(function() {
+              slider.data('unslider').next();
+            });
+
+          });
+        </script>
+        <title>Projeto Encimat</title>
+    </head>
+    <body>
+      <!-- Header -->
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="header-bg">
+          <div class="container header">
+            <div class="row">
+              <div class="col-md-2 logo">
+                <img src="{% static "encimat1/images/index/logoencimat.png" %}" class="img-responsive" alt="My image"/>
+              </div>
+              <div class="col-md-8 menu">
+                <ul class="nav navbar-nav">
+                  <li><a class="link-inicio active" href="#inicio">Inicial</a></li>
+                  <li class="sep"></li>
+                  <li><a class="link-projeto" href="#projeto">O Projeto</a></li>
+                  <li class="sep"></li>
+                  <li><a class="link-equipe" href="#equipe">Equipe</a></li>
+                  <li class="sep"></li>
+                  <li><a class="link-contato" href="#contato">Contato</a></li>
+                </ul>
+              </div>
+              <div class="col-md-2 logos">
+                <img src="{% static "encimat1/images/index/logos.png"%}" class="img-responsive" alt="Logo CEFET e DEMAT"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Header -->
+      <!-- Tela Principal -->
+      <div id="inicio" class="bloco">
+        <div class="container">
+          <div class="row">
+            <h1 class="col-md-12 titulo">Mostra de Materiais</h1>
+            <h2 class="col-md-12 sub-titulo">Escolha uma das principais categorias</h2>
+              <div class="col-md-offset-1 col-md-10 hex-row1">
+                <div class="hex-column hex-first">
+                    <div id="categoria-metais" onclick="window.location='categoria/1';" class="hexagon">
+                      <div class="hexTop"></div>
+                      <div class="hexBottom"></div>
+                    </div>
+                    <a href="material/1" class="hexagon-link">
+                      <h2  class="title-deactive">Metais</h2>
+                    </a>
+                </div>
+                <div class="hex-column">
+                  <div id="categoria-polimeros" onclick="window.location='material/1';" class="hexagon ">
+                    <div class="hexTop"></div>
+                    <div class="hexBottom"></div>
+                  </div>
+                  <a href="material/1" class="hexagon-link">
+                    <h2 class="title-deactive">Polímeros</h2>
+                  </a>
+                </div>
+                <div class="hex-column ">
+                  <div id="categoria-ceramicos" onclick="window.location='material/1';" class="hexagon ">
+                    <div class="hexTop"></div>
+                    <div class="hexBottom"></div>
+                  </div>
+                  <a href="material/1" class="hexagon-link">
+                    <h2 class="title-deactive">Cerâmicos</h2>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-offset-3 hex-row2">
+                <div class="hex-column">
+                  <div id="categoria-avancados" onclick="window.location='material/1';" class="hexagon">
+                    <div class="hexTop"></div>
+                    <div class="hexBottom"></div>
+                  </div>
+                  <a href="material/1" class="hexagon-link">
+                    <h2 class="title-deactive">Avançados</h2>
+                  </a>
+                </div>
+                <div class="hex-column">
+                  <div id="categoria-compositos" onclick="window.location='material/1';" class="hexagon ">
+                    <div class="hexTop"></div>
+                    <div class="hexBottom"></div>
+                  </div>
+                  <a href="material/1" class="hexagon-link">
+                    <h2 class="title-deactive">Compósitos</h2>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="row pesquise">
+              <div class="col-md-offset-4 col-md-4">
+                <a href="pesquise" class="pesquise-btn col-md-12 hvr-sweep-to-right">Ou Pesquise</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tela Principal -->
+      <!-- O Projeto -->
+      <div id="projeto" class="projeto-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 projeto-desc">
+              <h2>O Projeto</h2>
+              <p>
+                ENCIMAT - Encontros Interdisciplinares de Materiais e Mostra de Materiais - é um projeto desenvolvido por professores do Departamento de Engenharia de Materiais, que possui principal objetivo de proporcionar aos alunos do CEFET-MG, a participação em atividades científicas e tecnológicas da área de Materiais. As diversas modalidades de encontros proporcionam aos alunos dos diversos níveis de ensino, a oportunidade de aprender novas técnicas, aperfeiçoar conhecimentos, e ter contato com a realidade de outras instituições de ensino e do mercado de trabalho.
+              </p>
+              <div class="row">
+                <div class="img-projeto col-md-12 projeto-img">
+                  <img class= "img-responsive" src="{% static "encimat1/images/index/logoencimat.png" %}" alt="" />
+                </div>
+
+              </div>
+            </div>
+            <div class="col-md-offset-1 col-md-5 projeto-conteudo">
+              <div class="projeto-ativ">
+                <h3>Atividades</h3>
+                <p>
+                  Nas atividades do ENCIMAT são apresentados e discutidos temas das diversas áreas de atuação do curso de Engenharia de Materiais - metais, cerâmicas, polímeros, compósitos e biomateriais - a partir de uma perspectiva interdisciplinar, no intuito de agregar conhecimentos de diferentes áreas, fomentar o saber científico e propiciar uma visão mais ampla do conhecimento.
+                </p>
+              </div>
+              <div class="projeto-amostra">
+                <h3>A Mostra</h3>
+                <p>
+                  Paralelamente as atividades, será organizada durante a vigência do projeto, uma mostra de materiais que será exposta no último encontro do ano e posteriormente ficará no DEMAT para ser consultada por todos os alunos. O mostruário catalogará os principais materiais de Engenharia, com seus devidos nomes e informações científicas e tecnológicas, fornecendo aos alunos apoio didático para os estudos em materiais.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- O Projeto -->
+      <!-- Equipe -->
+      <div id="equipe" class="bg-equipe">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2>Equipe</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="anterior seta-esq col-md-1">
+              <a class="seta unslider-arrow next"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            </div>
+            <div class="col-md-10">
+              <div class="my-slider">
+                <ul>
+                  <li>
+                      <div class="row painel-equipe">
+                        <div class="col-md-offset-1 col-md-4 integrante">
+                          <div class="row">
+                            <div class="img-integrante col-md-5">
+                              <img src="{% static "encimat1/images/index/avatar.png"%}" class="img-circle img-responsive" alt="" />
+                            </div>
+                            <div class="conteudo-integrante">
+                              <h3>Nome do Integrante 1</h3>
+                              <h4>Função</h4>
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-offset-2  col-md-4 integrante">
+                          <div class="row">
+                            <div class="img-integrante col-md-5">
+                              <img src="{% static "encimat1/images/index/avatar.png"%}" class="img-circle img-responsive" alt="" />
+                            </div>
+                            <div class="conteudo-integrante">
+                              <h3>Nome do Integrante 2</h3>
+                              <h4>Função</h4>
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </li>
+                  <li>
+                    <div class="row painel-equipe">
+                    <div class="col-md-offset-1 col-md-10">
+                      <div class="row">
+                        <div class="col-md-5 integrante">
+                          <div class="row">
+                            <div class="img-integrante col-md-5">
+                              <img src="{% static "encimat1/images/index/avatar.png"%}" class="img-circle img-responsive" alt="" />
+                            </div>
+                            <div class="conteudo-integrante">
+                              <h3>Nome do Integrante 3</h3>
+                              <h4>Função</h4>
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-offset-2 col-md-5 integrante">
+                          <div class="row">
+                            <div class="img-integrante col-md-5">
+                              <img src="{% static "encimat1/images/index/avatar.png"%}" class="img-circle img-responsive" alt="" />
+                            </div>
+                            <div class="conteudo-integrante">
+                              <h3>Nome do Integrante 4</h3>
+                              <h4>Função</h4>
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </li>
+                  <li>
+                    <div class="row painel-equipe">
+                    <div class="col-md-offset-1 col-md-10">
+                      <div class="row">
+                        <div class="col-md-5 integrante">
+                          <div class="row">
+                            <div class="img-integrante col-md-5">
+                              <img src="{% static "encimat1/images/index/avatar.png"%}" class="img-circle img-responsive" alt="" />
+                            </div>
+                            <div class="conteudo-integrante">
+                              <h3>Nome do Integrante 5</h3>
+                              <h4>Função</h4>
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-offset-2 col-md-5 integrante">
+                          <div class="row">
+                            <div class="img-integrante col-md-5">
+                              <img src="{% static "encimat1/images/index/avatar.png"%}" class="img-circle img-responsive" alt="" />
+                            </div>
+                            <div class="conteudo-integrante">
+                              <h3>Nome do Integrante 6</h3>
+                              <h4>Função</h4>
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="proximo seta-dir col-md-1">
+              <a class="seta unslider-arrow next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Equipe -->
+      <!-- Contato -->
+      <div id="contato" class="contato-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5 contato">
+              <h2>Contato</h2>
+              <ul>
+                <li><strong>Email: </strong> encimatcefetmg@gmail.com</li>
+                <li><strong>Endereco:</strong> Av. Amazonas, 5253, Nova Suíça - Cep: 30.421-169</li>
+                <li>Belo Horizonte</li>
+              </ul>
+            </div>
+            <div class="col-md-offset-2 col-md-5 instituicao">
+              <h2>Instituição</h2>
+              <div class="row">
+                <div class="col-md-5 link-cefet">
+                  <a href="http://cefetmg.br/">
+                    <img src="{% static "/encimat1/images/index/logocefet.png" %}" alt="Site CEFET"/>
+                  </a>
+                </div>
+                <div class="col-md-offset-2 col-md-3">
+                  <a href="http://www.demat.cefetmg.br/">
+                    <img src="{% static "/encimat1/images/index/logodemat.png" %}" class="img-responsive" alt="Site DEMAT"/>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Contato -->
+      <!-- Copyright -->
+      <div class="copy-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 copy-encimat">
+              ENCIMAT 2016 - Alguns Direitos Reservados
+            </div>
+            <div class="col-md-6 copy-desenvolvedor">
+              Desenvolvido por Lucas Corrêa
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+<div class="col-md-12">
+  {% if instance.title %}
+    <h3>{{instance.title}}</h3>
+  {% endif  %}
+</div>
+<div class="col-md-offset-3 col-md-6">
+  <img src="{{ instance.image_url|default_if_none:'#' }}" class="img-responsive" alt=""/>
+</div>

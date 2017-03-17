@@ -1,0 +1,9 @@
+{% load cms_tags %}
+<li>
+  <div class="img-caption">
+    <img src="{{ instance.image_url|default_if_none:'#' }}" class="img-slider" alt="{{ instance.subtitle }}" />
+      <p>
+        {{ instance.subtitle }}
+      </p>
+  </div>
+</li>
