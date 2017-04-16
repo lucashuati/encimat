@@ -152,7 +152,6 @@ INSTALLED_APPS = (
     'djangocms_googlemap',
     'djangocms_video',
     'mysite',
-    'polls',
     'encimat_cms',
     'aldryn_background_image',
     'django_select2',

@@ -1,0 +1,305 @@
+body {
+    padding-top: 75px;
+    font-family: 'Sintony', sans-serif;
+    color: black;
+}
+
+/* ------------------------------------- Header ------------------------------------------------ */
+.navbar {
+    background-color: black;
+    border: 0px;
+}
+.header {
+    height: 75px;
+    background-color: black !important;
+
+}
+
+.header ul li a{
+    font-family: 'Sintony', sans-serif;
+    height: 75px;
+    font-size: 25pt;
+    color: white !important;
+    padding: 25px;
+    background-color: black !important;
+}
+
+.header ul li a:hover{
+    background-color: black;
+    color: #E6BD00 !important;
+}
+
+.header ul li a:active{
+    background-color: black; !important;
+    color: #E6BD00 !important;
+}
+
+.header .collapse {
+    float: right;
+}
+
+.navbar-brand {
+    padding: 7.5px;
+}
+
+.header button{
+    background-color: white;
+    height: 65px;
+    width: 65px;
+}
+
+.header button span{
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: black;
+}
+
+/* ------------------------------------- Painel ------------------------------------- */
+#painel h1{
+    font-size: 40pt;
+}
+
+#painel h2{
+    font-size: 25pt;
+    margin-bottom: 40px;
+}
+
+
+.hexLink h2{
+    font-size: 25pt;
+    background-color: #151515;
+}
+.hexLink:hover{
+    text-decoration: none;
+    color: white;
+}
+.invisible{
+    display: none;
+}
+
+.visible{
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-130%); !important
+background-color: rgba(255, 0, 0, 0.5);
+}
+.centralize {
+    height: 100%;
+    min-height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.search a{
+    margin-top: 40px;
+    margin-left: 40px;
+    padding: 10px 40px;
+    font-size: 20pt;
+    border: 3px solid black;
+    color: black;
+}
+
+.search a:before{
+    background: #000;
+}
+
+.search a:hover{
+    text-decoration: none;
+}
+
+/* ---------------------------------- Projeto ----------------------------------*/
+.project-bg {
+    margin-top: 40px;
+    background-color: black;
+    padding: 0px 0 40px 0;
+}
+
+.project {
+    color: white;
+    margin-top: 40px;
+}
+
+.project p{
+    font-size: 12pt;
+}
+.title {
+    font-size: 35pt;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 30%;
+    background-color: black;
+    margin: 5px 0;
+}
+
+.subtitle {
+    font-size: 25pt;
+}
+
+.subtitle::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25%;
+    background-color: black;
+    margin: 5px 0;
+}
+
+.footer h2.title::after, .project h2.title::after, .project h3.subtitle::after{
+    background-color: white;
+}
+
+#second-column h3:first-child{
+    margin-top: 0px;
+}
+
+/* ---------------------------------- Equipe ----------------------------------*/
+
+.jcarousel-wrapper {
+    margin: 20px auto;
+    position: relative;
+    /*border: 3px solid #000;*/
+    padding: 25px;
+
+}
+
+/** Carousel **/
+
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.jcarousel ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel li {
+    width: 200px;
+    float: left;
+    border: 1px solid #fff;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.jcarousel img {
+    display: block;
+    max-width: 100%;
+    height: auto !important;
+}
+
+/** Carousel Controls **/
+
+.jcarousel-control-prev,
+.jcarousel-control-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background: #4E443C;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 0 1px #000;
+    font: 24px/27px Arial, sans-serif;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    -webkit-box-shadow: 0 0 4px #F0EFE7;
+    -moz-box-shadow: 0 0 4px #F0EFE7;
+    box-shadow: 0 0 4px #F0EFE7;
+}
+
+.jcarousel-control-prev {
+    left: 15px;
+}
+
+.jcarousel-control-next {
+    right: 15px;
+}
+
+/** Carousel Pagination **/
+
+.jcarousel-pagination {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    margin: 0;
+}
+
+.jcarousel-pagination a {
+    text-decoration: none;
+    display: inline-block;
+
+    font-size: 11px;
+    height: 10px;
+    width: 10px;
+    line-height: 10px;
+
+    background: #fff;
+    color: #4E443C;
+    border-radius: 10px;
+    text-indent: -9999px;
+
+    margin-right: 7px;
+
+
+    -webkit-box-shadow: 0 0 2px #4E443C;
+    -moz-box-shadow: 0 0 2px #4E443C;
+    box-shadow: 0 0 2px #4E443C;
+}
+
+.jcarousel-pagination a.active {
+    background: #4E443C;
+    color: #fff;
+    opacity: 1;
+
+    -webkit-box-shadow: 0 0 2px #F0EFE7;
+    -moz-box-shadow: 0 0 2px #F0EFE7;
+    box-shadow: 0 0 2px #F0EFE7;
+}
+
+/* ---------------------------------- Contato ----------------------------------*/
+
+.contact-bg {
+    background-color: black;
+}
+
+.footer {
+    color: white;
+}
+
+.copy {
+    background-color: #151515;
+}
+
+#adress ul{
+    list-style: none;
+    padding: 0;
+    font-size: 13pt;
+}
+.copy p {
+    margin: 0;
+}
+
+.copy p a{
+    color: black;
+    font-weight: bold;
+}
