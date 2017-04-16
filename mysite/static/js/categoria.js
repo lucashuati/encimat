@@ -1,15 +1,17 @@
 $(document).ready(function(){
-  $('.sub').hide();
-  $('.list-group a').click(function(){
-    var IdPai = $(this).attr('id');
-    var isHidden = $('.' + IdPai).is(':visible');
-    console.log(IdPai);
-    if(isHidden){
-      $(this).removeClass('active');
-      $('.' + IdPai).slideUp('slow');
-    }else {
-      $(this).addClass('active');
-      $('.' + IdPai).slideDown('slow');
-    }
-  });
+    // $('.material').hide();
+    $('.sub-tree ul').each(function (i) {
+        if(i != 0){
+            $(this).hide();
+        }
+    });
+    $('.link-parent').click(function () {
+        var show = $(this).next();
+        if($(show).is(':visible')){
+            $(show).slideUp('slow');
+        }else {
+            $(show).slideDown('slow');
+        }
+    });
+
 });

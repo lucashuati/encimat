@@ -1,0 +1,27 @@
+<select class="js-example-basic-single" style="width: 100%; margin-bottom: 45px;">
+  <optgroup label="Metais">
+  {% for i in instance.get_metais %}
+    <option value="{{ i.get_public_url }}">{{ i.get_title }}</option>
+  {% endfor %}
+  </optgroup>
+  <optgroup label="Polímeros">
+  {% for i in instance.get_pol %}
+    <option value="{{ i.get_public_url }}">{{ i.get_title }}</option>
+  {% endfor %}
+  </optgroup>
+  <optgroup label="Cerâmicos">
+  {% for i in instance.get_cer %}
+    <option value="{{ i.get_public_url }}">{{ i.get_title }}</option>
+  {% endfor %}
+  </optgroup>
+  <optgroup label="Avançados">
+  {% for i in instance.get_avan %}
+    <option value="{{ i.get_public_url }}">{{ i.get_title }}</option>
+  {% endfor %}
+  </optgroup>
+  <optgroup label="Compósitos">
+  {% for i in instance.get_comp %}
+    <option value="{{ i.get_public_url }}">{{ i.get_title }}</option>
+  {% endfor %}
+  </optgroup>
+</select>

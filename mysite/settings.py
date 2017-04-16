@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import os
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -150,7 +153,9 @@ INSTALLED_APPS = (
     'djangocms_video',
     'mysite',
     'polls',
-    'encimat_cms'
+    'encimat_cms',
+    'aldryn_background_image',
+    'django_select2',
 )
 
 LANGUAGES = (
@@ -178,14 +183,57 @@ CMS_LANGUAGES = {
 
 CMS_TEMPLATES = (
     ## Customize this
-    ('fullwidth.html', 'Fullwidth'),
+    ('material.html', 'Material'),
+    ('busca.html', 'Busca'),
+    ('categoria.html', 'Categoria'),
+    ('index.html', 'Index'),
     ('sidebar_left.html', 'Sidebar Left'),
     ('sidebar_right.html', 'Sidebar Right')
 )
 
 CMS_PERMISSION = True
 
-CMS_PLACEHOLDER_CONF = {}
+CMS_PLACEHOLDER_CONF = {
+    'principais': {
+        'plugins': ['PrincipaisPlugin'],
+        'name' : gettext("Principais Materiais")
+    },
+    'links': {
+        'plugins': ['SearchPlugin']
+    },
+    'categoriaintro' : {
+        'plugins': ['TextPlugin'],
+        'name': gettext("Introducao")
+    },
+    'equipe' : {
+        'plugins': ['EquipePlugin'],
+        'name': gettext("Equipe")
+    },
+    'subcategoria' : {
+        'plugins': ['SubPlugin'],
+        'name': gettext("Sub Categoria")
+    },
+    'bg' : {
+        'plugins': ['BackGroundPlugin'],
+        'name': gettext("Imagem de Fundo")
+    },
+    'Content' : {
+        'plugins': ['ContentPluginPublisher'],
+        'name': gettext("Conteudo")
+    },
+    'descricao' : {
+        'plugins': ['TextPlugin'],
+        'name': gettext("Descricao Encimat")
+    },
+    'atividades' : {
+        'plugins': ['TextPlugin'],
+        'name': gettext("Atividades")
+    },
+    'mostra' : {
+        'plugins': ['TextPlugin'],
+        'name': gettext("A Mostra")
+    },
+}
 
 DATABASES = {
     'default': {

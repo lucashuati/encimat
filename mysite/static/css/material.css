@@ -1,12 +1,12 @@
-
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500');
 
 /* --------------------------HEADER -------------------------- */
+
 body {
-  padding-top: 0px !important;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   color: black;
+  padding: 0px;
 }
 
 h3 {
@@ -33,7 +33,6 @@ h3:after {
   margin: 5px auto;
   margin-bottom: 30px;
 }
-
 .header-bg {
   font-family: 'Roboto', sans-serif;
   color: white;
@@ -88,7 +87,9 @@ h3:after {
   font-weight: 500;
   padding: 180px 0px !important;
 }
-
+.div-title {
+  padding: 0px;
+}
 .div-title h2{
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
@@ -187,7 +188,6 @@ h3:after {
   border-top: 2px solid black;
   padding-top: 20px;
   color: white;
-  margin-top: 40px;
   background-color: #263238;
 }
 
@@ -203,4 +203,22 @@ h3:after {
   border-radius: 5px;
   border: 1px solid black;
   z-index: 500;
+}
+
+/* -------------------------- Principais -------------------------- */
+.principais {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.principais:hover {
+  color: black;
+}
+
+.principais-title {
+  padding: 15px;
+}
+
+.principais-title h4{
+  font-size: 17pt;
 }
