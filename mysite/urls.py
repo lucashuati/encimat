@@ -21,7 +21,6 @@ urlpatterns += i18n_patterns(
     url(r'^admin/', include(admin.site.urls)),  # NOQA
     # url(r'^polls/', include('polls.urls', namespace='polls')),
     url(r'^', include('cms.urls')),
-    url(r'^select2/', include('django_select2.urls')),
 )
 
 # This is only needed when using runserver.
