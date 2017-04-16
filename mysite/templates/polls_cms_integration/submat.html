@@ -1,0 +1,6 @@
+<a href="{{ instance.link.get_absolute_url }}">
+    <div class="text-center col-md-4 material">
+      <h4>{{ instance.title }}</h4>
+      <img src="{{ instance.image_url|default_if_none:'#' }}" style="margin: 10px auto;" class="img-responsive img-circle" alt="">
+    </div>
+</a>

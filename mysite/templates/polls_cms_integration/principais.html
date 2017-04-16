@@ -1,0 +1,9 @@
+<a href="{{ instance.link.get_absolute_url }}">
+  <div class="col-md-4 principais">
+    <div class="col-md-12" style="height: 250px; background: url({{ instance.image_url|default_if_none:'#' }}) no-repeat; min-width: 100%; background-size: cover; background-position: center;">
+    </div>
+    <div class="col-md-12 principais-title" style="background-color: #707070">
+      <h4 class="text-center">{{ instance.title }}</h4>
+    </div>
+  </div>
+</a>
