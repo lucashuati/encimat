@@ -68,7 +68,6 @@ h3:after {
 }
 /* -------------------------- Intro -------------------------- */
 .intro-bg {
-  /*background: url(../images/material/aluminio-bg.jpg) no-repeat;*/
   min-width: 100%;
   background-size: cover;
   background-attachment: fixed;
