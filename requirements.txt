@@ -27,8 +27,6 @@ html5lib==0.9999999
 olefile==0.44
 packaging==16.8
 Pillow==4.0.0
-pkg-resources==0.0.0
--e git+http://git@github.com/divio/django-polls.git@e6508521a529864932ab4fe5862a6ce728eddf45#egg=polls
 pyparsing==2.2.0
 pytz==2016.10
 six==1.10.0
