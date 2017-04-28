@@ -160,7 +160,6 @@ INSTALLED_APPS = (
     'mysite',
     'encimat_cms',
     'aldryn_background_image',
-    'django_select2',
 )
 
 LANGUAGES = (
