@@ -77,7 +77,6 @@ body {
 }
 .bloco {
   font-family: 'Sintony',sans-serif;
-  background: url(../images/index/aluminio2-bg.jpg) no-repeat;
   min-width: 100%;
   background-size: cover;
 }
@@ -113,25 +112,6 @@ body {
 }
 
 /* Categorias */
-#categoria-metais {
-  background-image: url(../images/index/metais-bg.jpg);
-}
-
-#categoria-ceramicos {
-  background-image: url(../images/index/ceramicos-bg.jpg);
-}
-
-#categoria-polimeros {
-  background-image: url(../images/index/polimeros-bg.jpg);
-}
-
-#categoria-avancados {
-  background-image: url(../images/index/bio-bg.jpg);
-}
-
-#categoria-compositos {
-  background-image: url(../images/index/compositos-bg.jpg);
-}
 
 
 
