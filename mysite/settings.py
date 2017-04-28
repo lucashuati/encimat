@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+import dj_database_url
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 """
