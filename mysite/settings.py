@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 """
@@ -75,8 +76,22 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
 STATIC_ROOT = os.path.join(DATA_DIR, 'static')
 
+AWS_STORAGE_BUCKET_NAME = 'encimat'
+AWS_ACCESS_KEY_ID = 'AKIAJGEXRYKTOWTFCJYQ'
+AWS_SECRET_ACCESS_KEY = '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'
+MEDIAFILES_LOCATION = 'media'
+
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+MEDIA_URL = "https://%s/media/" % (AWS_S3_CUSTOM_DOMAIN)
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'mysite', 'static'),
+)
+
+MEDIAFILES_DIRS = (
+    os.path.join(BASE_DIR, 'mysite', 'media'),
 )
 SITE_ID = 1
 
@@ -154,6 +169,7 @@ INSTALLED_APPS = (
     'mysite',
     'encimat_cms',
     'aldryn_background_image',
+    'storages',
 )
 
 LANGUAGES = (
