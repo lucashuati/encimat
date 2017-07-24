@@ -75,9 +75,9 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 
-AWS_STORAGE_BUCKET_NAME = 'encimat'
-AWS_ACCESS_KEY_ID = 'AKIAJGEXRYKTOWTFCJYQ'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = os.environ.get('S3_BUCKET')
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 MEDIAFILES_LOCATION = 'media'
 
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
