@@ -111,28 +111,6 @@ body {
   vertical-align:middle;
 }
 
-/* Categorias */
-#categoria-metais {
-  background-image: url(../images/index/metais-bg.jpg);
-}
-
-#categoria-ceramicos {
-  background-image: url(../images/index/ceramicos-bg.jpg);
-}
-
-#categoria-polimeros {
-  background-image: url(../images/index/polimeros-bg.jpg);
-}
-
-#categoria-avancados {
-  background-image: url(../images/index/bio-bg.jpg);
-}
-
-#categoria-compositos {
-  background-image: url(../images/index/compositos-bg.jpg);
-}
-
-
 
 /* Projeto */
 
