@@ -75,8 +75,6 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 
-DEFAULT_FILE_STORAGE = "mysite.storage.ECGoogleCloudStorage"
-
 GCS_ROOT = "https://storage.googleapis.com/{bucket_name}/".format(
     bucket_name=os.environ.get("GCS_BUCKET")
 )
