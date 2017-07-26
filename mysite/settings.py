@@ -75,15 +75,17 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 
-AWS_STORAGE_BUCKET_NAME = os.environ.get('S3_BUCKET')
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-MEDIAFILES_LOCATION = 'media'
+DEFAULT_FILE_STORAGE = "mysite.storage.ECGoogleCloudStorage"
 
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+GCS_ROOT = "https://storage.googleapis.com/{bucket_name}/".format(
+    bucket_name=os.environ.get("GCS_BUCKET")
+)
 
-MEDIA_URL = "https://%s/media/" % (AWS_S3_CUSTOM_DOMAIN)
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+MEDIA_PREFIX = "media"
+MEDIA_URL = "{gcs_root}{prefix}/".format(
+    gcs_root=GCS_ROOT,
+    prefix=MEDIA_PREFIX,
+)
 
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
