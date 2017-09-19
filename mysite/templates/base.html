@@ -35,10 +35,10 @@
             infinite: true
           });
           $('.next-slide').click(function() {
-            slider.data('unslider').next();
+            $($(this).parent().find('.aplicacao-slider')[0]).data('unslider').next();
           });
           $('.prev-slide').click(function() {
-            slider.data('unslider').prev();
+            $($(this).parent().find('.aplicacao-slider')[0]).data('unslider').prev();
           });
         });
         </script>
