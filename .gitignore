@@ -97,3 +97,6 @@ venv.bak/
 
 # IDE
 .idea/
+
+#DB
+*.db
