@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+import dj_database_url
 
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -21,7 +22,6 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -70,8 +70,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
+<<<<<<< HEAD
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
 STATIC_ROOT = os.path.join(DATA_DIR, 'static')
@@ -80,21 +83,33 @@ AWS_STORAGE_BUCKET_NAME = os.environ.get('S3_BUCKET')
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 MEDIAFILES_LOCATION = 'media'
+=======
+>>>>>>> configure_dp
 
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+GCS_ROOT = "https://storage.googleapis.com/{bucket_name}/".format(
+    bucket_name=os.environ.get("GCS_BUCKET")
+)
 
-MEDIA_URL = "https://%s/media/" % (AWS_S3_CUSTOM_DOMAIN)
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+MEDIA_PREFIX = "media"
+MEDIA_URL = "{gcs_root}{prefix}/".format(
+    gcs_root=GCS_ROOT,
+    prefix=MEDIA_PREFIX,
+)
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'mysite', 'static'),
+    os.path.join(PROJECT_ROOT, 'static'),
 )
 
 MEDIAFILES_DIRS = (
     os.path.join(BASE_DIR, 'mysite', 'media'),
 )
+
 SITE_ID = 1
 
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 TEMPLATES = [
     {
@@ -191,7 +206,7 @@ CMS_LANGUAGES = {
             'hide_untranslated': False,
             'name': gettext('en'),
             'redirect_on_fallback': True,
-        },
+        }
     ],
 }
 
@@ -248,6 +263,8 @@ CMS_PLACEHOLDER_CONF = {
         'name': gettext("A Mostra")
     },
 }
+# Update database configuration with $DATABASE_URL.
+
 
 DATABASES = {
     'default': {
@@ -260,7 +277,8 @@ DATABASES = {
         'USER': ''
     }
 }
-
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 MIGRATION_MODULES = {
 
 }
