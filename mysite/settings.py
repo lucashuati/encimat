@@ -74,17 +74,6 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
-<<<<<<< HEAD
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
-STATIC_ROOT = os.path.join(DATA_DIR, 'static')
-
-AWS_STORAGE_BUCKET_NAME = os.environ.get('S3_BUCKET')
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-MEDIAFILES_LOCATION = 'media'
-=======
->>>>>>> configure_dp
 
 GCS_ROOT = "https://storage.googleapis.com/{bucket_name}/".format(
     bucket_name=os.environ.get("GCS_BUCKET")
