@@ -28,8 +28,6 @@ $(document).ready(function(){
             var offSetMenu = 75;
             var currLink = $(this);
             var refElement = $(currLink.attr("href"));
-            // console.log(refElement);
-            console.log(refElement.css("padding"));
             if (refElement.position().top - offSetMenu <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
                 currLink.css("cssText", "color: #E6BD00 !important;");
             }
