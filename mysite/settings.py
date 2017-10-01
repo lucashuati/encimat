@@ -89,9 +89,9 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
 
-MEDIAFILES_DIRS = (
-    os.path.join(BASE_DIR, 'mysite', 'media'),
-)
+# MEDIAFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'mysite', 'media'),
+# )
 
 SITE_ID = 1
 
